@@ -1,42 +1,36 @@
-# Quizthing : A simple, yet functional quiz app
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Overview
-This is one of my first projects, to help increase my skills in TS, Next.js, React, Node, etc.
-One of the first ideas that went through my head was a quiz app, because I get quite annoyed with all the other ones such as Kahoot or Blooket, because they have quite complicated systems.
+## Getting Started
 
-The overall design brief of this app is:
+First, run the development server:
 
-"A simple but functional quiz web-app, with functions to almost eliminate all chances of cheating, make the app accessible, and make it easy to use."
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Setup Overview
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-In this app, you will find 2 main web apps. 
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- The Player-side app (the one players use to participate in a game)
-- The Host-side app (the one people use to host a quiz)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-The 2 apps need to be on seperate domains, and hosted as 2 different apps.
+## Learn More
 
-This is the **player-facing** web app branch of this repo. Go to the main-host branch to see the host-facing source code.
+To learn more about Next.js, take a look at the following resources:
 
-## Cheating Prevention
-**So far, these are just ideas, that I know eventually, one of these won't be possible**
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- Keeping the DB that contains the answers private, and only accessible to the servers.
-- Keeping the Per-Quiz DB (the one that contains the stats for one quiz session), read-only for the users, and make the servers the only entity with write access.
-- Answers aren't ever passed over to the user, and only kept on the server.
-- Preventing a user from submitting multiple answers, and overwriting their current answer status for that question
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Simplicity & Ease of Use
-The host side of the app will have a simple login page run through Clerk, and a simple UI to host a quiz, and make a quiz.
-The player side of the app will be easy to join a quiz, and play.
+## Deploy on Vercel
 
-## Accessibility
-On the player side of the app, the user will have the ability to use the number keys to select their answer, and the whole page will be screen-reader friendly.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Also, there will be an option to change the font of the pages to one of three fonts:
-- Noto Sans (Default)
-- OpenDyslexic
-- Courier
-
-This preference will be stored in a simple "font=notosans" cookie.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
